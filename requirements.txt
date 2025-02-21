@@ -1,0 +1,26 @@
+# requirements.txt
+
+# Google API and Authentication
+google-auth==2.23.0
+google-auth-oauthlib==1.0.0
+google-auth-httplib2==0.1.0
+google-api-python-client==2.94.0
+
+# Scheduling
+apscheduler==3.10.2
+python-dotenv==1.0.0
+
+# Email Verification
+requests==2.31.0
+smtplib
+imaplib
+email
+
+# Logging and Debugging
+logging
+
+# LangChain for Orchestration
+langchain==0.0.240
+
+# Python Environment Management
+python-dotenv==1.0.0

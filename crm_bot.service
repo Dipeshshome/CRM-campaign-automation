@@ -1,0 +1,15 @@
+[Unit]
+Description=Petabytz Sales Agent CRM Bot Service
+After=network.target
+
+[Service]
+WorkingDirectory=petabytz_sales_agent
+ExecStart=/usr/bin/python3 main.py
+Restart=always
+User=dipesh
+Environment=PYTHONUNBUFFERED=1
+StandardOutput=append:/path/to/petabytz_sales_agent/logs/app.log
+StandardError=append:/path/to/petabytz_sales_agent/logs/error.log
+
+[Install]
+WantedBy=multi-user.target
