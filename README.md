@@ -1,5 +1,5 @@
-Petabytz Sales Agent
-Overview
+#Petabytz Sales Agent
+##Overview
 The Petabytz Sales Agent is an automated lead management and outreach system designed to streamline sales campaigns. It automates email verification, outreach, and response analysis using the following integrations:
 
 Hunter.io for email verification
@@ -7,33 +7,36 @@ Gmail SMTP and IMAP for email communication
 Groq API for sentiment analysis of email responses
 Google Sheets for lead management and tracking
 APScheduler for scheduling tasks
-Key Features
+
+
+##Key Features
 Email Verification: Verifies lead email addresses using Hunter.io API.
 Automated Email Outreach: Sends personalized emails to verified leads.
 Response Analysis: Analyzes email responses for sentiment and summary using Groq's Chat Completion API.
 Lead Management: Reads and updates lead information in Google Sheets.
 Automated Scheduling: Uses APScheduler for periodic tasks such as lead monitoring and email response checking.
 Logging: Detailed logging for debugging and monitoring.
-Project Architecture
-plaintext
 
-petabytz_sales_agent/
-│   agent_a.py          # Handles email verification
-│   agent_b.py          # Manages email outreach and response analysis
-│   supervisor_agent.py # Supervises and assigns tasks to agents
-│   sheets_handler.py   # Interacts with Google Sheets
-│   main.py             # Entry point of the application
-│   config.py           # Configuration file for environment variables and settings
-│   requirements.txt    # Required dependencies
-│   crm_bot.service     # Systemd service file for deployment
-│   .env                # Environment variables (Not included in the repository)
+##Project Architecture
+
+
+petabytz_sales_agent/<br>
+│   agent_a.py          # Handles email verification<br>
+│   agent_b.py          # Manages email outreach and response analysis<br>
+│   supervisor_agent.py # Supervises and assigns tasks to agents<br>
+│   sheets_handler.py   # Interacts with Google Sheets<br>
+│   main.py             # Entry point of the application<br>
+│   config.py           # Configuration file for environment variables and settings<br>
+│   requirements.txt    # Required dependencies<br>
+│   crm_bot.service     # Systemd service file for deployment<br>
+│   .env                # Environment variables (Not included in the repository)<br>
 └───logs/
         app.log         # Application logs
 
 
-Modules Overview
+##Modules Overview
 1. Agent A (agent_a.py)
-Purpose: Verifies email addresses using Hunter.io API.
+Purpose: Verifies email addresses using Hunter.io API.<br>
 Main Functions:
 verify_email(email): Verifies the email and checks if it's valid.
 handle_verification(row, email): Handles the verification and updates the status in Google Sheets.
